@@ -1,6 +1,7 @@
 package application;
 
-import model.services.BrazilinterestService;
+import model.services.BrazilInterestService;
+import model.services.InterestService;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -15,8 +16,8 @@ public class Main {
 
         System.out.print("Meses: ");
         int month = sc.nextInt();
-        BrazilinterestService br = new BrazilinterestService(2.0);
-        double payment = br.payment(ammount, month);
+        InterestService is = new BrazilInterestService(2.0);
+        double payment = is.payment(ammount, month);
 
         System.out.println();
         System.out.println("Pagamento apos "+ month +" meses:");
